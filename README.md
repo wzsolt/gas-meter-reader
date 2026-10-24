@@ -1,4 +1,4 @@
-# Gas Reader
+# Gas Meter Reader
 
 Battery-powered gas-meter pulse reader for the **Seeed XIAO ESP32-C6**, with ESP-IDF firmware and a local Home Assistant custom integration over Wi-Fi/MQTT.
 
