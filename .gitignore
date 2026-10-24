@@ -1,0 +1,46 @@
+# Private configuration and generated NVS images (contain credentials)
+/config.local.json
+/provisioning/
+*.local.*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.storage/
+secrets.yaml
+secrets.yml
+
+# Local SDKs, Python environments and caches
+/.tools/
+.venv*/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# ESP-IDF build products; keep sdkconfig.defaults and dependencies.lock
+/firmware/build*/
+/firmware/managed_components/
+/firmware/sdkconfig
+/firmware/sdkconfig.old
+/firmware/sdkconfig.diagnostic.local*
+*.bin
+*.elf
+*.map
+*.o
+*.a
+/dist/
+
+# Machine-specific IDE settings and internal development notes
+/firmware/.vscode/settings.json
+/docs/VERIFICATION.md
+*.code-workspace
+
+# OS/editor temporary files and logs
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+*.log

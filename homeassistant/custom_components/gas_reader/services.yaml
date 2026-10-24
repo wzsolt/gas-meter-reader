@@ -1,0 +1,16 @@
+set_meter_reading:
+  name: Set meter reading
+  description: Correct the physical meter reading without changing pulse consumption or MQTT duplicate protection. Synchronize pending pulses before correction.
+  fields:
+    device_id:
+      name: Device ID
+      required: true
+      example: aabbccddeeff
+      selector:
+        text:
+    value:
+      name: Meter reading (m³)
+      required: true
+      example: "1234.56"
+      selector:
+        text:

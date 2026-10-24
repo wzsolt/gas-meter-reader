@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gas Reader</title>
+  <style>
+    body {font:18px system-ui;max-width:650px;margin:4em auto;padding:1em}
+    button,input {font:inherit;margin:.5em 0}
+    pre {white-space:pre-wrap}
+    button {padding:.5em 1em;cursor:pointer}
+    button:disabled {cursor:default;opacity:.6}
+    #reset {border:1px solid #a72b2b;color:#a72b2b;background:transparent}
+  </style>
+</head>
+<body>
+  <h1>Gas Reader</h1>
+  <pre id="status">Állapot betöltése…</pre>
+  <h2>Karbantartás</h2>
+  <p>A Kilépés gomb vagy a külső gomb rövid megnyomása elmenti a számlálóállapotot,
+    majd alvó módba lép. A belépéshez használt hosszú nyomást előbb engedd fel.</p>
+  <button id="exit" type="button">Kilépés</button>
+  <p id="exit-result" role="status"></p>
+  <h2>Függő impulzusok törlése</h2>
+  <p>A reset az ESP függő impulzusait törli. A Home Assistantban beállított óraállás
+    és a korábban feldolgozott fogyasztás megmarad. Egy korábbi függő küldés előbb lezárul.</p>
+  <button id="reset" type="button">Számláló reset</button>
+  <p id="reset-result" role="status"></p>
+  <h2>Firmware-frissítés</h2>
+  <p>Válaszd ki a Gas Reader alkalmazás .bin fájlját.</p>
+  <input id="file" type="file" accept=".bin">
+  <br><button id="upload" type="button">Feltöltés</button>
+  <p id="result" role="status"></p>
+  <script>
+    const exitButton = document.querySelector('#exit');
+    const uploadButton = document.querySelector('#upload');
+    const resetButton = document.querySelector('#reset');
+    function setBusy(value) { exitButton.disabled = uploadButton.disabled = resetButton.disabled = value; }
+    function refreshStatus() { return fetch('/api/status').then(r => {
+      if (!r.ok) throw new Error('status');
+      return r.json();
+    }).then(s => {
+      document.querySelector('#status').textContent =
+        'Firmware: ' + s.firmware + '\nAkkufeszültség: ' + (s.battery_mv / 1000).toFixed(3) +
+        ' V\nFüggő impulzusok: ' + s.pending_pulses + '\nEszköz: ' + s.device_id +
+        '\nSzámlálási hiba: ' + s.counter_fault + '\nFüggő reset: ' + (s.reset_pending ? 'igen' : 'nem');
+    }).catch(() => { document.querySelector('#status').textContent = 'Az állapot nem olvasható. Frissítsd az oldalt.'; }); }
+    refreshStatus();
+
+    exitButton.onclick = async () => {
+      setBusy(true);
+      const result = document.querySelector('#exit-result');
+      result.textContent = 'Kilépés kérése…';
+      try {
+        const response = await fetch('/api/exit', {
+          method: 'POST', headers: {'X-Gas-Reader-Exit': '1'}
+        });
+        result.textContent = await response.text();
+        if (!response.ok) setBusy(false);
+      } catch (e) {
+        result.textContent = 'A kapcsolat megszakadt. Ha a LED kialudt, az eszköz alvó módba lépett.';
+        setBusy(false);
+      }
+    };
+
+    uploadButton.onclick = async () => {
+      const file = document.querySelector('#file').files[0];
+      if (!file) return;
+      setBusy(true);
+      const result = document.querySelector('#result');
+      result.textContent = 'Feltöltés…';
+      try {
+        const response = await fetch('/api/ota', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/octet-stream', 'X-Gas-Reader-Update': '1'},
+          body: file
+        });
+        result.textContent = await response.text();
+      } catch (e) {
+        result.textContent = 'A kapcsolat megszakadt. Ellenőrizd az eszköz állapotát.';
+      }
+      setBusy(false);
+    };
+
+    resetButton.onclick = async () => {
+      if (!confirm('Törlöd az ESP függő impulzusait? A HA óraállása megmarad.')) return;
+      setBusy(true);
+      const result = document.querySelector('#reset-result');
+      result.textContent = 'Impulzusok törlése és visszaigazolás várása…';
+      try {
+        const response = await fetch('/api/reset', {method:'POST', headers:{'X-Gas-Reader-Reset':'confirm'}});
+        result.textContent = await response.text();
+        await refreshStatus();
+      } catch (e) {
+        result.textContent = 'A kapcsolat megszakadt. Ellenőrizd a függő impulzusokat és a függő reset állapotát; a kérés már teljesülhetett.';
+      }
+      setBusy(false);
+    };
+  </script>
+</body>
+</html>

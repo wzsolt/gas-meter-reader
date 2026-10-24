@@ -1,0 +1,10 @@
+{
+  "ssid": "CHANGE_ME_WIFI",
+  "wifi_password": "CHANGE_ME_WIFI_PASSWORD",
+  "fallback_ssid": "",
+  "fallback_wifi_password": "",
+  "mqtt_uri": "mqtt://192.168.1.10:1883",
+  "mqtt_user": "gas_reader",
+  "mqtt_password": "CHANGE_ME_MQTT_PASSWORD",
+  "ota_password": "CHANGE_ME_OTA_PASSWORD"
+}

@@ -1,0 +1,112 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Gas Reader: USB-portok listázása",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": [
+        "${workspaceFolder}/../tools/idf-python.sh",
+        "-m",
+        "serial.tools.list_ports",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Gas Reader: Első USB-feltöltés",
+      "detail": "A legutóbbi build és a provisioning/nvs.bin feltöltése. Felülírja a korábbi NVS-beállításokat és mentett számlálóállapotot.",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": [
+        "${workspaceFolder}/../tools/idf-python.sh",
+        "${workspaceFolder}/../tools/flash_first_install.py",
+        "--port",
+        "${input:gasReaderPort}",
+        "--first-install"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "Gas Reader: Normál alkalmazás visszatöltése",
+      "detail": "Csak ota_0; az NVS megmarad. Az első USB-telepítés után, OTA-váltás előtt használható.",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": [
+        "${workspaceFolder}/../tools/idf-python.sh",
+        "${workspaceFolder}/../tools/flash_application.py",
+        "--port",
+        "${input:gasReaderPort}",
+        "--build-dir",
+        "${workspaceFolder}/build",
+        "--initial-slot"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "Gas Reader: Kezdeti NVS-konfiguráció feltöltése",
+      "detail": "Próbapadi kezdeti konfiguráció: csak az NVS-t írja, a firmware megmarad. A mentett számláló és példányazonosító alaphelyzetbe kerül!",
+      "type": "process",
+      "command": "/bin/bash",
+      "args": [
+        "${workspaceFolder}/../tools/idf-python.sh",
+        "-m",
+        "esptool",
+        "--chip",
+        "esp32c6",
+        "--port",
+        "${input:gasReaderPort}",
+        "write-flash",
+        "--flash-size",
+        "4MB",
+        "0x9000",
+        "${workspaceFolder}/../provisioning/nvs.bin"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/.."
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "gasReaderPort",
+      "type": "promptString",
+      "description": "Az ESP teljes USB-portneve, például /dev/cu.usbmodem2101; a feladat leírása jelzi, felülírja-e az NVS-t."
+    }
+  ]
+}

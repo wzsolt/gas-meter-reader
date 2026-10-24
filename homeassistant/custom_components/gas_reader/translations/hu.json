@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Gas Reader",
+        "description": "Add meg az eszköz MAC-alapú azonosítóját és a kezdő óraállást.",
+        "data": {
+          "device_id": "Eszközazonosító",
+          "initial_m3": "Kezdő óraállás (m³)",
+          "pulse_m3": "Impulzusérték (m³)"
+        }
+      }
+    },
+    "error": {
+      "invalid_device_id": "12 hexadecimális karakter szükséges.",
+      "invalid_decimal": "Érvényes, nem negatív tizedes érték szükséges; az impulzusérték legyen pozitív."
+    },
+    "abort": {
+      "already_configured": "Az eszköz már be van állítva."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "gas": {
+        "name": "Gázóraállás"
+      },
+      "consumption": {
+        "name": "Gázfogyasztás"
+      },
+      "battery": {
+        "name": "Akkufeszültség"
+      },
+      "battery_percent": {
+        "name": "Akkutöltöttség (becsült)"
+      },
+      "last_seen": {
+        "name": "Utolsó kapcsolat"
+      },
+      "firmware": {
+        "name": "Firmware"
+      },
+      "maintenance": {
+        "name": "Karbantartási állapot",
+        "state": {
+          "sleeping": "Alvás",
+          "maintenance": "Karbantartás"
+        }
+      },
+      "counter_fault": {
+        "name": "Számláló állapota"
+      }
+    },
+    "text": {
+      "meter_reading": {
+        "name": "Gázóraállás beállítása (m³)"
+      }
+    }
+  },
+  "exceptions": {
+    "invalid_meter_reading": {
+      "message": "Adj meg egy nem negatív óraállást m³-ben, legfeljebb kilenc tizedesjeggyel. Tizedespont vagy vessző használható."
+    },
+    "meter_reading_save_failed": {
+      "message": "Az óraállást nem sikerült tartósan menteni. Ellenőrizd a Home Assistant tárhelyét és naplóját, majd próbáld újra."
+    }
+  }
+}

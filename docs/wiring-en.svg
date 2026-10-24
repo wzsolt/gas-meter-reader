@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100">
+<rect width="100%" height="100%" fill="white"/>
+<text x="55" y="30" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17324d">GAS READER • Final wiring diagram</text>
+<text x="55" y="79" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#526477">Seeed XIAO ESP32-C6  |  Firmware GPIO assignments  |  Antenna not shown</text>
+<polyline points="55,117 1445,117" fill="none" stroke="#dce4eb" stroke-width="2" stroke-linejoin="round"/>
+<rect x="630" y="170" width="300" height="705" fill="#f1f6fc" stroke="#1565c0" stroke-width="3"/>
+<text x="780" y="204" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1565c0">SEEED XIAO</text>
+<text x="780" y="242" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1565c0">ESP32-C6</text>
+<text x="648" y="290" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1565c0">D0 / GPIO0</text>
+<circle cx="630" cy="320" r="5" fill="#1565c0"/>
+<text x="648" y="525" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1565c0">3V3</text>
+<circle cx="630" cy="555" r="5" fill="#1565c0"/>
+<text x="648" y="630" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1565c0">D1 / GPIO1</text>
+<circle cx="630" cy="660" r="5" fill="#1565c0"/>
+<text x="912" y="290" dominant-baseline="text-before-edge" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1565c0">D2 / GPIO2</text>
+<circle cx="930" cy="320" r="5" fill="#1565c0"/>
+<text x="912" y="630" dominant-baseline="text-before-edge" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1565c0">D4 / GPIO22</text>
+<circle cx="930" cy="660" r="5" fill="#1565c0"/>
+<text x="780" y="418" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#526477">Logical symbol only</text>
+<text x="780" y="448" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Not the physical pin order.</text>
+<text x="780" y="753" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">D3 / GPIO21: unused</text>
+<text x="720" y="828" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#a93131">BAT+</text>
+<text x="840" y="828" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17324d">BAT−</text>
+<circle cx="720" cy="875" r="5" fill="#a93131"/>
+<circle cx="840" cy="875" r="5" fill="#17324d"/>
+<text x="65" y="139" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#17324d">1  Battery voltage divider</text>
+<text x="410" y="181" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#a93131">BAT+</text>
+<polyline points="410,207 410,215" fill="none" stroke="#a93131" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="410,215 410,227" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<rect x="398" y="227" width="24" height="46" fill="white" stroke="#17324d" stroke-width="2"/>
+<polyline points="410,273 410,285" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="448" y="229" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">R1</text>
+<text x="448" y="257" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">1 MΩ • 1%</text>
+<polyline points="410,285 410,345" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="410" cy="320" r="5" fill="#17324d"/>
+<polyline points="410,320 630,320" fill="none" stroke="#1565c0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="410,345 410,357" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<rect x="398" y="357" width="24" height="46" fill="white" stroke="#17324d" stroke-width="2"/>
+<polyline points="410,403 410,415" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="448" y="353" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">R2</text>
+<text x="448" y="381" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">330 kΩ • 1%</text>
+<polyline points="410,415 410,437" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="410,437 410,449" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="388,449 432,449" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="396,456 424,456" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="404,463 416,463" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="410" y="476" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">GND</text>
+<polyline points="410,320 230,320 230,370" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="206,370 254,370" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="206,382 254,382" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="230,382 230,437" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="230,437 230,449" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="208,449 252,449" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="216,456 244,456" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="224,463 236,463" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="230" y="476" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">GND</text>
+<text x="75" y="354" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">C1</text>
+<text x="75" y="382" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">100 nF</text>
+<text x="65" y="500" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">R2 and C1 connect in parallel to GND.</text>
+<text x="65" y="526" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#17324d">2  Geckollect reed sensor</text>
+<polyline points="630,555 410,555 410,580" fill="none" stroke="#17834b" stroke-width="3" stroke-linejoin="round"/>
+<text x="363" y="557" dominant-baseline="text-before-edge" text-anchor="end" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#17834b">3V3</text>
+<polyline points="410,580 410,592" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<rect x="398" y="592" width="24" height="36" fill="white" stroke="#17324d" stroke-width="2"/>
+<polyline points="410,628 410,640" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="448" y="585" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">R3</text>
+<text x="448" y="613" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">100 kΩ</text>
+<polyline points="410,640 410,700" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="410" cy="660" r="5" fill="#17324d"/>
+<polyline points="410,660 630,660" fill="none" stroke="#1565c0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="410,700 410,712" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="410" cy="712" r="5" fill="#17324d"/>
+<polyline points="410,765 410,753 387,723" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="410" cy="753" r="5" fill="#17324d"/>
+<text x="70" y="704" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">REED • NO</text>
+<text x="70" y="735" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Two wires; either polarity.</text>
+<polyline points="410,765 410,782" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="410,782 410,794" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="388,794 432,794" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="396,801 424,801" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="404,808 416,808" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="410" y="821" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">GND</text>
+<text x="65" y="845" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">NO = normally open contact.</text>
+<text x="990" y="139" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#17324d">3  Push button</text>
+<polyline points="930,320 1170,320 1170,352" fill="none" stroke="#1565c0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1170,352 1170,364" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1170" cy="364" r="5" fill="#17324d"/>
+<polyline points="1170,417 1170,405 1147,375" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1170" cy="405" r="5" fill="#17324d"/>
+<polyline points="1170,417 1170,440" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1170,440 1170,452" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1148,452 1192,452" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1156,459 1184,459" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1164,466 1176,466" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="1170" y="479" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">GND</text>
+<polyline points="1127,375 1142,375" fill="none" stroke="#526477" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1127,366 1127,384" fill="none" stroke="#526477" stroke-width="2" stroke-linejoin="round"/>
+<text x="1210" y="355" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">SW1</text>
+<text x="1210" y="385" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">NO button</text>
+<text x="990" y="220" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#526477">Internal pull-up to 3V3:</text>
+<text x="990" y="249" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#526477">enabled by the firmware.</text>
+<text x="990" y="500" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Use the two terminals that close when pressed.</text>
+<text x="990" y="526" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#17324d">4  External green LED</text>
+<polyline points="930,660 1000,660" fill="none" stroke="#1565c0" stroke-width="3" stroke-linejoin="round"/>
+<rect x="1000" y="648" width="80" height="24" fill="white" stroke="#17324d" stroke-width="2"/>
+<polyline points="1080,660 1150,660" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="1040" y="583" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">R4</text>
+<text x="1040" y="611" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">1 kΩ</text>
+<polyline points="1150,642 1150,678 1182,660 1150,642" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1150,642 1150,678 1182,660" fill="#e4f4e8" stroke="#17324d" stroke-width="3"/>
+<polyline points="1185,639 1185,681" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1185,660 1370,660 1370,695" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1370,695 1370,707" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1348,707 1392,707" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1356,714 1384,714" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1364,721 1376,721" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="1370" y="734" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">GND</text>
+<text x="1143" y="702" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17834b">A</text>
+<text x="1192" y="702" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17834b">K</text>
+<text x="1143" y="733" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#526477">anode</text>
+<text x="1206" y="758" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#526477">cathode</text>
+<polyline points="1168,630 1196,602" fill="none" stroke="#17834b" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1182,605 1196,602 1193,616" fill="none" stroke="#17834b" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1184,641 1212,613" fill="none" stroke="#17834b" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1198,616 1212,613 1209,627" fill="none" stroke="#17834b" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="582" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17834b">LED1</text>
+<text x="1260" y="611" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17834b">green</text>
+<text x="990" y="802" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Anode: long lead. Cathode: short lead,</text>
+<text x="990" y="830" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">next to the flat side of the LED body.</text>
+<rect x="65" y="909" width="505" height="106" fill="#fff8f4" stroke="#e8cfc1" stroke-width="2"/>
+<text x="85" y="926" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Protected single-cell 18650</text>
+<text x="85" y="961" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">3.7 V nominal • 4.2 V fully charged</text>
+<text x="538" y="917" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#a93131">+</text>
+<text x="538" y="972" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#17324d">−</text>
+<polyline points="570,933 720,933 720,875" fill="none" stroke="#a93131" stroke-width="3" stroke-linejoin="round"/>
+<text x="625" y="903" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#a93131">BAT+</text>
+<polyline points="570,990 840,990 840,875" fill="none" stroke="#17324d" stroke-width="3" stroke-linejoin="round"/>
+<text x="880" y="935" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#17324d">Connect battery to rear BAT+ / BAT− pads.</text>
+<text x="880" y="970" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#526477">Divider BAT+ is the same battery positive node.</text>
+<polyline points="55,1037 1445,1037" fill="none" stroke="#dce4eb" stroke-width="2" stroke-linejoin="round"/>
+<text x="55" y="1054" dominant-baseline="text-before-edge" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#17324d">All GND symbols share one net: XIAO GND = BAT−. D0, D1, D2 and D4 are separate signals.</text>
+</svg>

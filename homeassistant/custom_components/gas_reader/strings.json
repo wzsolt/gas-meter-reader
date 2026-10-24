@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Gas Reader",
+        "description": "Enter the MAC-based device ID and initial meter reading.",
+        "data": {
+          "device_id": "Device ID",
+          "initial_m3": "Initial meter reading (m³)",
+          "pulse_m3": "Volume per pulse (m³)"
+        }
+      }
+    },
+    "error": {
+      "invalid_device_id": "Enter twelve hexadecimal characters.",
+      "invalid_decimal": "Enter a valid nonnegative decimal; pulse volume must be positive."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "gas": {
+        "name": "Gas meter reading"
+      },
+      "consumption": {
+        "name": "Gas consumption"
+      },
+      "battery": {
+        "name": "Battery voltage"
+      },
+      "battery_percent": {
+        "name": "Battery level (estimated)"
+      },
+      "last_seen": {
+        "name": "Last contact"
+      },
+      "firmware": {
+        "name": "Firmware"
+      },
+      "maintenance": {
+        "name": "Maintenance state",
+        "state": {
+          "sleeping": "Sleeping",
+          "maintenance": "Maintenance"
+        }
+      },
+      "counter_fault": {
+        "name": "Counter state"
+      }
+    },
+    "text": {
+      "meter_reading": {
+        "name": "Set gas meter reading (m³)"
+      }
+    }
+  },
+  "exceptions": {
+    "invalid_meter_reading": {
+      "message": "Enter a nonnegative meter reading in m³ with at most nine decimal places. Use a decimal point or comma."
+    },
+    "meter_reading_save_failed": {
+      "message": "The meter reading could not be saved. Check Home Assistant storage and logs, then try again."
+    }
+  }
+}
