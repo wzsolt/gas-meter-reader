@@ -33,6 +33,7 @@ def main():
             if file.is_file() and "__pycache__" not in file.parts and file.suffix in (".py", ".json", ".yaml"):
                 z.write(file, file.relative_to(base))
         z.write(ROOT / "docs/INSTALL.md", "INSTALL.md")
+        z.write(ROOT / "LICENSE", "LICENSE")
     with (output / "SHA256SUMS").open("w") as stream:
         for file in (firmware, archive):
             stream.write(f"{hashlib.sha256(file.read_bytes()).hexdigest()}  {file.name}\n")

@@ -31,3 +31,7 @@ A nyilvános repóban a források és dokumentációk vannak. A `.bin` fájlok, 
 - **Áramkimaradáskor a legutóbbi flashmentés óta gyűlt impulzusok elveszhetnek.** A hardveres időzítést és áramfelvételt élesítés előtt mérni kell.
 
 Aktuális forrásverziók: firmware 1.5.0, HA-integráció 1.6.0. A részletes, angol nyelvű belépési pont a [README](README.md).
+
+## Licenc
+
+A projekt saját forráskódja, dokumentációja és bekötési rajzai [MIT licenc](LICENSE) alatt érhetők el. Copyright (c) 2026 wzsolt. A külső függőségek saját licencei megmaradnak.

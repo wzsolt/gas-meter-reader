@@ -45,7 +45,7 @@ Use a Git workflow or GitHub Desktop so ignore rules are applied. Uploading a ra
 
 ## First commit and push
 
-Create an **empty public repository** on GitHub, without an auto-generated README/initial commit. Choose a license and add a `LICENSE` file when you have selected the intended license; none is assigned automatically by these preparation steps.
+Create an **empty public repository** on GitHub, without an auto-generated README/initial commit. This project includes the [MIT License](../LICENSE); retain that file and its copyright notice when distributing the project's code or documentation. Third-party dependencies retain their own licenses.
 
 For this local repository, after reviewing the files:
 

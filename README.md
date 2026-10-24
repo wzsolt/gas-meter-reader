@@ -105,3 +105,7 @@ The embedded page is [firmware/main/maintenance.html](firmware/main/maintenance.
 | `dist/` | Locally generated release artifacts; ignored, absent from a fresh clone |
 
 This implementation uses local `mqtt://` and HTTP Basic authentication, without TLS or signed firmware. Keep the broker and maintenance page on a trusted local network. The daily schedule is configured for Hungary; other time zones require changing `GR_LOCAL_TZ` in `firmware/main/daily_schedule.h` and rebuilding.
+
+## License
+
+This project's original source code, documentation and wiring diagrams are licensed under the [MIT License](LICENSE). Copyright (c) 2026 wzsolt. Third-party dependencies retain their own licenses.
